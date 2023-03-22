@@ -1,6 +1,8 @@
 #include "classe_point.h"
 
 using namespace std;
+#ifndef classe_point_h
+#define classe_point_h
 
 class forme{
 private :
@@ -23,3 +25,4 @@ public:
 };
 
 ostream& operator<<(ostream&s, forme const&frm);
+#endif 

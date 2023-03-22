@@ -1,5 +1,6 @@
 #include "classe_point.h"
 #include "forme.h"
+use namespace std;
 
 using namespace std;
 
