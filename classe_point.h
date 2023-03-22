@@ -16,8 +16,8 @@ public :
   point(float _x, float _y);
   point(point const& pt);
   //accesseurs
-  float get_x();
-  float get_y();
+  float get_x() const;
+  float get_y() const;
 
   //Mutateur
   void set_x(float _x);
@@ -26,6 +26,11 @@ public :
   //Methode
   void translater (point pt);
   void translater (float _x, float _y);
+
+  //opérateur
+  void operator+=(point const& pt);
+
 };
 
+ostream& operator<<(ostream&s, point const&pt);
 #endif 

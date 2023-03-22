@@ -9,8 +9,9 @@ int main() {
   point p2;
   point p3(p2);
 
-  p2.set_x(3);
-  p2.set_y(2);
-  
-  cout<< p2.get_x() << p2.get_y() << endl;
+  p3.set_x(3);
+  p3.set_y(2);
+
+  p3+=p1;
+  cout<< p3 << endl;
 }

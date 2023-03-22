@@ -15,10 +15,10 @@ point::point(point const& pt){
 }
 
 //accesseurs
-float point::get_x(){
+float point::get_x() const{
   return this->x;
 }
-float point::get_y(){
+float point::get_y() const{
   return this->y;
 }
 
@@ -38,4 +38,15 @@ void point::translater (point pt){
 void point::translater (float _x, float _y){
   this->x = this->x + _x;
   this->y = this->y + _y;
+}
+
+//operateurs
+ostream& operator<<(ostream&s, point const&pt){
+  s << pt.get_x() <<";"<< pt.get_y() << endl;
+  return s;
+}
+
+void point::operator+=(point const& pt){
+  this->x += pt.x;
+  this->y += pt.y;
 }
